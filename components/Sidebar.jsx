@@ -1,5 +1,6 @@
 // components/Sidebar.jsx
 'use client';
+import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import {
@@ -10,13 +11,13 @@ import {
 const navitems = [
   { href: '/', icon: Home, label: 'Home Sweet Home', color: 'bg-lavender-100' },
   { href: '/gpa-calculator', icon: Calculator, label: 'GPA Genie', color: 'bg-mint-100' },
-  { href: '/assignments', icon: ClipboardList, label: 'Task Garden', color: 'bg-peach-100' },
-  { href: '/study-planner', icon: Calendar, label: 'SAT/AP Planner', color: 'bg-sky-100' },
-  { href: '/wellness', icon: Heart, label: 'Wellness Corner', color: 'bg-rose-100' },
-  { href: '/quiz-generator', icon: Brain, label: 'Quiz Factory', color: 'bg-lavender-100' },
+  { href: '/assignments', icon: ClipboardList, label: 'Task Garden 🌱', color: 'bg-peach-100' },
+  { href: '/study-planner', icon: Calendar, label: 'SAT/AP Planner 📅', color: 'bg-sky-100' },
+  { href: '/wellness', icon: Heart, label: 'Wellness Corner 💖', color: 'bg-rose-100' },
+  { href: '/quiz-generator', icon: Brain, label: 'Quiz Factory 🎯', color: 'bg-lavender-100' },
   { href: '/scholarships', icon: GraduationCap, label: 'Scholarship Scouts', color: 'bg-mint-100' },
   { href: '/ai-tutor', icon: MessageCircle, label: 'Study Buddy AI', color: 'bg-peach-100' },
-  { href: '/grade-calculator', icon: Target, label: 'Grade Goal Finder', color: 'bg-sky-100' },
+  { href: '/grade-calculator', icon: Target, label: 'Grade Goal Finder', color: 'bg-sky-100' }
 ];
 
 export default function Sidebar() {
@@ -40,7 +41,9 @@ export default function Sidebar() {
             <Link
               key={item.href}
               href={item.href}
-              className={`flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all duration-200 ${isActive ? `${item.color} shadow-sm` : 'hover:bg-white/50'}`}
+              className={`flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all duration-200 ${
+                isActive ? `${item.color} shadow-sm` : 'hover:bg-white/50'
+              }`}
             >
               <item.icon className={`w-5 h-5 ${isActive ? 'text-purple-600' : 'text-gray-500'}`} />
               <span className={`text-sm font-medium ${isActive ? 'text-gray-800' : 'text-gray-600'}`}>
