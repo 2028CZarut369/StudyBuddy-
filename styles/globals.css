@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --lavender: #E8E0F0;
+  --mint: #D4EDDA;
+  --peach: #FFECD2;
+  --sky: #D6EAF8;
+  --rose: #FADBD8;
+  --cream: #FDF6E3;
+}
+
+body {
+  @apply bg-gradient-to-br from-[#FDF6E3] via-[#F8F4FF] to-[#E8F4F8];
+  font-family: 'Inter', 'Nunito', sans-serif;
+}
+
+.glass-card {
+  @apply bg-white/70 backdrop-blur-md border border-white/40 rounded-2xl shadow-lg;
+}
+
+.cute-button {
+  @apply px-5 py-2.5 rounded-full font-semibold transition-all duration-200 hover:scale-105 hover:shadow-md active:scale-95;
+}
+
+.input-cute {
+  @apply w-full px-4 py-3 rounded-xl border-2 border-purple-100 focus:border-purple-300 focus:ring-4 focus:ring-purple-50 outline-none transition-all bg-white/80;
+}
