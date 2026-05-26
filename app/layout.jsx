@@ -1,4 +1,5 @@
 // app/layout.jsx
+import React from 'react';
 import './globals.css';
 import Sidebar from '@/components/Sidebar';
 
