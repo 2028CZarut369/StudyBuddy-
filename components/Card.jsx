@@ -11,7 +11,7 @@ const colorMap = {
 
 export default function Card({ children, className = "", color = 'lavender' }) {
   return (
-    <div className={`bg-gradient-to-br ${colorMap[color]} border rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow ${className}`}>
+    <div className={`bg-gradient-to-br ${colorMap[color] || colorMap.lavender} border rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow ${className}`}>
       {children}
     </div>
   );
